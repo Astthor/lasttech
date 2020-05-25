@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <h1>Address List</h1>
+
+    <!-- Testing data retrieval from temporary MySQL address table-->
+    <table>
+        <thead>
+        <tr>
+            <th>addressID</th>
+            <th>address</th>
+            <th>zip</th>
+            <th>city</th>
+            <th>country</th>
+            <th>distance</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="Zalot: ${addressL}">
+            <td th:text="${Zalot.addressID}"/>
+            <td th:text="${Zalot.address}"/>
+            <td th:text="${Zalot.zip}"/>
+            <td th:text="${Zalot.city}"/>
+            <td th:text="${Zalot.country}"/>
+            <td th:text="${Zalot.distance}"/>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
